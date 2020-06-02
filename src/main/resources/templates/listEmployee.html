@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>DB登録</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link th:href="@{/css/list.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+		<div id="list">
+		<h1>データ一覧（従業員：EMPLOYEE）</h1>
+			<table class="table table-responsive table-striped table-bordered table-hover table-sm mx-auto">
+				<thead>
+					<tr>
+						<th>社員No</th>
+						<th>氏名</th>
+						<th>入社年</th>
+						<th>部署コード</th>
+					</tr>
+				</thead>
+					<tr th:each="employee : ${employeelist}" th:object="${employee}">
+						<td id="td_num" th:text="*{e_num}"></td>
+						<td id="td_name" th:text="*{e_name}"></td>
+						<td id="td_year" th:text="*{e_year}"></td>
+						<td id="td_cd" th:text="*{depart_cd}"></td>
+					</tr>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+</body>
+</html>

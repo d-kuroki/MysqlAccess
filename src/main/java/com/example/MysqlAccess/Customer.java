@@ -20,6 +20,9 @@ public class Customer {
 	
 	@Column(name="ADDRESS" ,columnDefinition = "VARCHAR(256)")
 	private String address;
+	
+	@Column(name="TEL" ,columnDefinition = "VARCHAR(11)")
+	private String tel;
 
 	@Column(name="UPDATE_DATE" ,columnDefinition = "datetime")
 	private Timestamp update_date;
@@ -50,16 +53,25 @@ public class Customer {
 	}
 	public void setAddress(String address) {
 		this.address = address;
-	}	
+	}
+	
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 
 	
 	public void setAll(  String c_num
 						,String c_name
 						,String address
+						,String tel
 						) {
 		this.c_num = c_num;
 		this.c_name = c_name;
 		this.address = address;
+		this.tel = tel;
 		
 	}
 	

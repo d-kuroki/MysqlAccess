@@ -17,17 +17,21 @@
 					<th>顧客コード</th>
 					<th>顧客名</th>
 					<th>住所</th>
+					<th>TEL</th>
 				</tr>
 			</thead>
 				<tr th:each="customer : ${customerlist}" th:object="${customer}">
 					<td id="td_num" th:text="*{c_num}"></td>		
 					<td id="td_name" th:text="*{c_name}"></td>		
 					<td id="td_address" th:text="*{address}"></td>
+					<td id="td_tel" th:text="*{tel}"></td>
 				</tr>
 			<tbody>
 			</tbody>
 			
 		</table>
+			
+		
 		
 	</div>
 </body>

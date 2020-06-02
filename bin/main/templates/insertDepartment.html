@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>DB登録</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<h1>DB登録（部署：DEPARTMENT)</h1>
+	<div id="access">
+		<form method="post" action="registerDepartment">
+			<span class="colorr-red">部署コード</span><input type="text" name="d_cd" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');"  required="required">
+			<span class="colorr-red">部署名</span><input type="text" name="d_name" required="required">
+			
+			<div id="insert">
+				<input type="submit" class="btn btn-outline-success" value="登録">
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
