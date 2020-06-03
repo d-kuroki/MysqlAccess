@@ -10,7 +10,7 @@
 <body>
 	<h1>データ一覧（顧客名簿:CUSTOMER）</h1>
 	<div id="list">
-	
+					<!-- bootstrapによる テーブルのレイアウト-->
 		<table class="table table-responsive table-striped table-bordered table-hover table-sm mx-auto">
 			<thead>
 				<tr>
@@ -19,7 +19,7 @@
 					<th>住所</th>
 					<th>TEL</th>
 				</tr>
-			</thead>
+			</thead>	<!-- リスト一覧の中身にデータベースの情報を入れる -->
 				<tr th:each="customer : ${customerlist}" th:object="${customer}">
 					<td id="td_num" th:text="*{c_num}"></td>		
 					<td id="td_name" th:text="*{c_name}"></td>		

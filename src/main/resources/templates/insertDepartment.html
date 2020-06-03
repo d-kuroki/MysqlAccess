@@ -12,7 +12,7 @@
 	<div id="access">
 		<form method="post" action="registerDepartment">
 			<span class="colorr-red">部署コード</span><input type="text" name="d_cd" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');"  required="required">
-			<span class="colorr-red">部署名</span><input type="text" name="d_name" required="required">
+			<span class="colorr-red">部署名</span><input type="text" name="d_name" required="required">	<!-- required=必須  [^0-9]で数字指定 i,''で全角文字で入力した時に空白が入る-->
 			
 			<div id="insert">
 				<input type="submit" class="btn btn-outline-success" value="登録">

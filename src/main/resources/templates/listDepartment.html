@@ -10,14 +10,14 @@
 <body>
 	<h1>データ一覧（部署：DEPARTMENT）</h1>
 		<div id="list">
-		
+							<!-- bootstrapによる テーブルのレイアウト-->
 			<table class="table table-responsive table-striped table-bordered table-hover table-sm mx-auto">
 				<thead>
 					<tr>
 						<th>部署コード</th>
 						<th>部署名</th>
 					</tr>
-				</thead>
+				</thead>	<!-- リスト一覧の中身にデータベースの情報を入れる -->
 					<tr th:each="department : ${departmentlist}" th:object="${department}">
 						<td id="td_num" th:text="*{d_cd}"></td>	
 						<td id="td_name" th:text="*{d_name}"></td>

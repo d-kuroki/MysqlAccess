@@ -10,7 +10,7 @@
 <body>
 
 		<div id="list">
-		<h1>データ一覧（従業員：EMPLOYEE）</h1>
+		<h1>データ一覧（従業員：EMPLOYEE）</h1>		<!-- bootstrapによる テーブルのレイアウト-->
 			<table class="table table-responsive table-striped table-bordered table-hover table-sm mx-auto">
 				<thead>
 					<tr>
@@ -19,7 +19,7 @@
 						<th>入社年</th>
 						<th>部署コード</th>
 					</tr>
-				</thead>
+				</thead>	<!-- リスト一覧の中身にデータベースの情報を入れる -->
 					<tr th:each="employee : ${employeelist}" th:object="${employee}">
 						<td id="td_num" th:text="*{e_num}"></td>
 						<td id="td_name" th:text="*{e_name}"></td>

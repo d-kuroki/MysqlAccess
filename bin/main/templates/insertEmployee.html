@@ -10,7 +10,7 @@
 <body>
 	<h1>DB登録（従業員：EMPLOYEE)</h1>
 	<div id="access">
-		<form method="post" action="registerEmployee">
+		<form method="post" action="registerEmployee">							<!-- required=必須  [^0-9]で数字指定 i,''で全角文字で入力した時に空白が入る-->
 			<span class="colorr-red">社員No</span><input type="text" name="e_num" maxlength="5" oninput="value = value.replace(/[^0-9]+/i,'');"  required="required">
 			<span class="colorr-red">氏名</span><input type="text" name="e_name" required="required">
 			<span class="colorr-red">入社年</span><input type="text" name="e_year" oninput="value = value.replace(/[^0-9]+/i,'');"  required="required">
