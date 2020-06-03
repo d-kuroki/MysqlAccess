@@ -19,8 +19,11 @@
 						<th>入社年</th>
 						<th>部署コード</th>
 					</tr>
-				</thead>	<!-- リスト一覧の中身にデータベースの情報を入れる -->
+				</thead>
+					<!-- th:each="変数名 : ${変数名}"　「th:each属性に指定したコレクション」の個数分出力される -->
 					<tr th:each="employee : ${employeelist}" th:object="${employee}">
+					
+						<!-- リスト一覧の中身にデータベースの情報を入れる -->
 						<td id="td_num" th:text="*{e_num}"></td>
 						<td id="td_name" th:text="*{e_name}"></td>
 						<td id="td_year" th:text="*{e_year}"></td>
